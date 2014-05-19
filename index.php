@@ -3,7 +3,7 @@
    
 */
 
-define("FURUN", "pondbay");
+define("TOKEN", "FURUN");
 $wechatObj = new wechatCallbackapiTest();
 if (isset($_GET['echostr'])) {
     $wechatObj->valid();
@@ -28,7 +28,7 @@ class wechatCallbackapiTest
         $timestamp = $_GET["timestamp"];
         $nonce = $_GET["nonce"];
 
-        $token = FURUN;
+        $token = TOKEN;
         $tmpArr = array($token, $timestamp, $nonce);
         sort($tmpArr);
         $tmpStr = implode( $tmpArr );
